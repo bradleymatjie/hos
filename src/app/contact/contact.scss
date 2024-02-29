@@ -1,0 +1,459 @@
+.contact {
+    border: 1px solid #8e9e6b;
+    background-color: #c5bd88;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    color: #252525;
+
+    @media (min-width: 320px) and (max-width: 600px) {
+        overflow-y: scroll;
+        
+        & > h1 {
+            font-size: 100px;
+            color: white;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            margin: 25% auto 0;
+            opacity: .2;
+            transform: rotateX(1turn);
+        }
+
+        & .back {
+            border: none;
+            margin: 0;
+            height: fit-content;
+            width: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: whitesmoke;
+            padding: 10px 10px;
+            border-radius: 0 0 20px 0;
+            background-color: transparent;
+            transition: 1s;
+        }
+        
+        & > div {
+            display: flex;
+            flex-flow: column-reverse;
+        }
+
+        & > div {
+            position: relative;
+            top: 100px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+            
+        &_right {
+            width: 100%;
+            
+            & form {
+                margin-top: 20%;
+                display: flex;
+                align-self: center;
+                justify-self: center;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                flex-direction: column;
+
+                & input {
+                    width: 100%; 
+                    height: 40px;
+                    margin-bottom: 5px;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 2px solid #252525;
+                    color: #252525;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                & textarea {
+                    width: 100%;
+                    border: none;
+                    margin-top: 15px;
+                    height: 100px;
+                    background-color: transparent;
+                    border-bottom: 2px solid #252525;
+                
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                & > button {
+                    display: flex;
+                    width: 200px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 5px;
+                    background-color: #252525;
+                    border: none;
+                    border-radius: 20px;
+                    color: whitesmoke;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &_left {
+            margin-top: 20px;
+            // display: flex;
+            flex-direction: column;
+            align-content: center;
+    
+            & button {
+                height: 40px;
+                width: 45%;
+                display: inline;
+                margin: 2px 5px;
+                border: none;
+                border-radius: 20px;
+                background-color: #252525;
+                color: whitesmoke;
+                position: relative;
+    
+                & span {
+                    border: 1px solid white;
+                    width: 40px;
+                    border-radius: 20px;
+                    position: absolute;
+                    left: 2px;
+                    top: 2px;
+                    display: none;
+                    bottom: 2px;
+                    background-color: whitesmoke;
+                    color: #252525;
+                    font-size: 20px;
+                }
+    
+                &.mail {
+                    background-color: whitesmoke;
+                    color: #252525;
+                    
+                    & span {
+                        background-color: #252525;
+                        color: whitesmoke;
+                    }
+                }
+            }
+    
+            & > div {
+                width: 80%;
+                margin: 5px auto;
+                display: none;
+            }
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 1079px) {
+        overflow-y: scroll;
+        
+        & > h1 {
+            font-size: 180px;
+            color: white;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            opacity: .2;
+            transform: rotateX(1turn);
+        }
+
+        & .back {
+            border: none;
+            margin: 0;
+            height: fit-content;
+            width: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: whitesmoke;
+            padding: 10px 10px;
+            border-radius: 0 0 20px 0;
+            background-color: transparent;
+            transition: 1s;
+        }
+        
+        & > div {
+            display: flex;
+            flex-flow: column-reverse;
+        }
+
+        & > div {
+            position: relative;
+            top: 100px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+            
+        &_right {
+            width: 100%;
+            
+            & form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                width: 600px;
+                flex-wrap: wrap;
+                margin: 0 auto;
+
+                & input {
+                    width: 250px; 
+                    height: 40px;
+                    margin-bottom: 5px;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 2px solid #252525;
+                    color: #252525;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                & textarea {
+                    width: 530px;
+                    border: none;
+                    height: 50px;
+                    background-color: transparent;
+                    border-bottom: 2px solid #252525;
+                    
+                
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                & > button {
+                    display: flex;
+                    width: 200px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 5px;
+                    background-color: #252525;
+                    border: none;
+                    border-radius: 20px;
+                    color: whitesmoke;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &_left {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+    
+            & button {
+                height: 40px;
+                width: 45%;
+                max-width: 200px;
+                margin: 0 nautp;
+                display: inline;
+                margin: 2px 5px;
+                border: none;
+                border-radius: 20px;
+                background-color: #252525;
+                color: whitesmoke;
+                position: relative;
+    
+                & span {
+                    border: 1px solid white;
+                    width: 40px;
+                    border-radius: 20px;
+                    position: absolute;
+                    left: 2px;
+                    top: 2px;
+                    display: none;
+                    bottom: 2px;
+                    background-color: whitesmoke;
+                    color: #252525;
+                    font-size: 20px;
+                }
+    
+                &.mail {
+                    background-color: whitesmoke;
+                    color: #252525;
+                    
+                    & span {
+                        background-color: #252525;
+                        color: whitesmoke;
+                    }
+                }
+            }
+    
+            & > div {
+                width: 80%;
+                margin: 5px auto;
+                display: none;
+            }
+        }
+    }
+
+    @media (min-width: 1080px) {
+
+    & > h1 {
+        font-size: 300px;
+        color: white;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: -10px;
+        margin: 0 auto;
+        opacity: .2;
+    }
+
+    & > .back {
+        border: none;
+        margin: 0;
+        height: fit-content;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        color: whitesmoke;
+        padding: 10px 10px;
+        border-radius: 0 20px 20px 0;
+        background-color: transparent;
+        transition: 1s;
+
+        &:hover {
+            transition: .5s;
+
+            &::after {
+                position: absolute;
+                content: 'Back';
+                top: 70%;
+            }
+        }
+    }
+
+    & > div {
+        display: flex;
+        position: relative;
+        top: 30%;
+        height: 75vh;
+    }
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 20%;
+
+        & button {
+            height: 40px;
+            width: 80%;
+            margin: 5px auto;
+            border: none;
+            border-radius: 20px;
+            background-color: #252525;
+            color: whitesmoke;
+            position: relative;
+
+            & span {
+                border: 1px solid white;
+                width: 40px;
+                border-radius: 20px;
+                position: absolute;
+                left: 2px;
+                top: 2px;
+                bottom: 2px;
+                background-color: whitesmoke;
+                color: #252525;
+                font-size: 20px;
+            }
+
+            &.mail {
+                background-color: whitesmoke;
+                color: #252525;
+                
+                & span {
+                    background-color: #252525;
+                    color: whitesmoke;
+                }
+            }
+        }
+
+        & > div {
+            width: 80%;
+            margin: 5px auto;
+        }
+    }
+
+    &_right {
+        width: 80%;
+        
+        & form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            row-gap: 0px;
+
+            & input {
+                width: 400px; 
+                height: 40px;
+                background-color: transparent;
+                border: none;
+                margin-bottom: 50px;
+                border-bottom: 2px solid #252525;
+                color: #252525;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            & textarea {
+                width: 80%;
+                border: none;
+                height: 100px;
+                background-color: transparent;
+                border-bottom: 2px solid #252525;
+            
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            & button {
+                display: flex;
+                width: 200px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px;
+                background-color: #252525;
+                border: none;
+                border-radius: 20px;
+                color: whitesmoke;
+                cursor: pointer;
+            }
+        }
+    }
+}
+}
