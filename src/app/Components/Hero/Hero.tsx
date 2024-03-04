@@ -20,16 +20,16 @@ export default function Hero() {
         <div className='small-cards-container'>
         <div 
           className='small-cards-container-item' 
-          style={{ backgroundImage: 'url(/assets/bg.jpg)', color: '#252525', boxShadow: '-1px 1px 15px 1px #252525'}}
+          style={{ backgroundImage: 'url(/assets/aboutus.jpg)', boxShadow: '-1px 1px 15px 1px #252525'}}
         >
           <div>
-            <Link href='/services' style={{ color: '#252525', fontSize: '2em'}}>Item</Link>
+            <Link href='/services' style={{ color: '#f5f5f5', fontSize: '2em',}}>Our Products</Link>
             <i className="bi bi-arrow-up-right-circle-fill"></i>
           </div>
         </div>
         <div className='small-cards-container-item' style={{ backgroundImage: 'url(https://www.linearity.io/blog/content/images/2022/03/610963083219da6a0a00ccb6_Cover-Dark-2.png)', color: '#f5f5f5', boxShadow: '1px -1px 15px 1px #252525'}}>
           <div >
-          <Link href={'/contact'} style={{color:'#f5f5f5', fontSize:'2em'}}>Item</Link>
+          <Link href={'/contact'} style={{color:'#f5f5f5', fontSize:'2em'}}>Our Work</Link>
           <i className="bi bi-arrow-up-right-circle-fill"></i>
           </div>
         </div>
@@ -39,9 +39,9 @@ export default function Hero() {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.5 }} 
-      className='landing-right'>
+      className='landing-right' style={{backgroundImage: 'url(/assets/LogoBackground.jpg)'}}>
         <div className="logo">
-            <Image src={'/logo.png'} alt='logo' className='logoImage' width={300} height={300} />
+            <Image src={'/logo.png'} alt='logo' className='logoImage' width={350} height={250} />
         </div>
         <div className='blackBlocks'>
         <div className='firstPerson'>
