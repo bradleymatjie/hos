@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <>
     <Header 
-        menuTogglerFunction={setMenuToggler} 
-        menuTogglerValue={menuToggler} 
+          menuTogglerFunction={setMenuToggler} 
+          menuTogglerValue={menuToggler} 
       />
       <MobileMenu menuToggler={menuToggler} />
     <main className="main">

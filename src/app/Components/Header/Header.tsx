@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 export default function Header({ menuTogglerFunction, menuTogglerValue }: any) {
   const pathname = usePathname();
 
-
  return (
   <header className='header'>
     <a href="/">
@@ -23,41 +22,17 @@ export default function Header({ menuTogglerFunction, menuTogglerValue }: any) {
               Home
             </Link>
           </li>
-          <li>
-            <Link
-              href="/TheProblem"
-              className={pathname === '/TheProblem' ? 'active' : ''}
-            >
-              The Problem
-            </Link>
-          </li>
 
           <li>
             <Link
-              href="/solution"
-              className={pathname === '/solution' ? 'active' : ''}
+              href="/services"
+              className={pathname === '/services' ? 'active' : ''}
               
             >
-              Our Solution
+              Our Services
             </Link>
           </li>
 
-        <li>
-          <Link
-            href="/features"
-            className={pathname === '/features' ? 'active' : ''}    
-          >
-            Features
-          </Link>
-        </li>
-        <li>
-          <Link 
-            href="/technology"
-            className={pathname === '/technology' ? 'active' : ''}
-          >
-            Technology
-          </Link>
-        </li>
         <li>
           <Link 
             href="/team"

@@ -23,38 +23,14 @@ export const MobileMenu = ({ removeMenu, menuToggler }: any) => {
           </li>
           <li>
             <Link
-              href="/TheProblem"
-              className={pathname === 'TheProblem' ? 'active' : ''}
+              href="/services"
+              className={pathname === 'services' ? 'active' : ''}
             >
-              The Problem
+              Our Services
             </Link>
           </li>
 
-          <li>
-            <Link
-              href="/solution"
-              className={pathname === '/solution' ? 'active' : ''}
-            >
-              Our Solution
-            </Link>
-          </li>
 
-        <li>
-          <Link 
-            href="/features"
-            className={pathname === '/features' ? 'active' : ''}
-          >
-            Features
-          </Link>
-        </li>
-        <li>
-          <Link 
-            href="/technology"
-            className={pathname === '/technology' ? 'active' : ''}
-          >
-            Technology
-          </Link>
-        </li>
         <li>
           <Link 
             href="/team"

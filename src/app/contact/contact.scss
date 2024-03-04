@@ -9,6 +9,7 @@
     justify-self: center;
     position: relative;
     color: #252525;
+    overflow: hidden;
 
     @media (min-width: 320px) and (max-width: 600px) {
         overflow-y: scroll;
