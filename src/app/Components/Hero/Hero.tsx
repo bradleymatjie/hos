@@ -41,7 +41,8 @@ export default function Hero() {
       transition={{ duration: 1.5 }} 
       className='landing-right' style={{backgroundImage: 'url(https://images.unsplash.com/photo-1603729657805-e3a33362453a?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'}}>
         <div className="logo">
-            <Image src={'/assets/logowhite.png'} alt='logo' className='logoImage' width={350} height={250} />
+            {/* <Image src={'/assets/logowhite.png'} alt='logo'  width={350} height={250} /> */}
+            <div id='logoImage' style={{backgroundImage: 'url(/assets/logowhite.png)', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '150px', height: '150px'}}></div>
         </div>
       </motion.div>
       </section> 

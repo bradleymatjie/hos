@@ -174,46 +174,9 @@
     }
 }
 
-#wave_line_1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    transform: scale(3);
-    animation: wave_line 10s ease-in 2s infinite alternate;
-    max-height: 100vh;
-
-    @media (max-width: 500px) {
-        display: none;
-    }
-}
-
-@keyframes wave_line {
-    0% {
-        transform: scale(1);
-    }
-
-    25% {
-        transform: scale(2) rotate(45deg);
-    }
-
-    50% {
-        transform: scale(4) rotate(90deg);
-    }
-
-    75% {
-        transform: scale(6) rotate(135deg);
-    }
-
-    100% {
-        transform: scale(8) rotate(160deg);
-    }
-}
 
 
-.logoImage {
+#logoImage {
     border-radius: 4px;
     transform: scale(2.5);
     box-shadow: 1px 1px 15px 1px rgb(29, 75, 22);
@@ -225,8 +188,8 @@
     color: white;
     
     @media (max-width: 1020px) {
-        height: 45%;
-        width: 90%;
+        height: 100px !important;
+        width: 100px !important;
     }
     
     & > img {
