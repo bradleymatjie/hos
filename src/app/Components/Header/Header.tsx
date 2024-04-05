@@ -1,3 +1,4 @@
+'use client'
 import './Header.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';

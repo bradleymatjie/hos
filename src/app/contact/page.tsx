@@ -1,8 +1,20 @@
+'use client'
 import Link from 'next/link'
 import './contact.scss'
+import Header from '../Components/Header/Header'
+import { MobileMenu } from '../Components/MobileMenu/MobileMenu'
+import { useState } from 'react';
 
 export default function Contact() {
+    const [menuToggler, setMenuToggler] = useState(false);
+    
     return (
+        <>
+           <Header 
+          menuTogglerFunction={setMenuToggler} 
+          menuTogglerValue={menuToggler} 
+      />
+      <MobileMenu menuToggler={menuToggler} />
         <section className='contact'>
             <h1>Contact</h1>
             <div className="back">
@@ -34,5 +46,6 @@ export default function Contact() {
                 </div>
             </div>
         </section>
+        </>
     )
 }

@@ -217,10 +217,12 @@
     border-radius: 4px;
     transform: scale(2.5);
     box-shadow: 1px 1px 15px 1px rgb(29, 75, 22);
-    height: 70%;
+    height: 60%;
     width: 95%;
     z-index: 10;
     margin: 0 auto;
+    backdrop-filter: blur(20px);
+    color: white;
     
     @media (max-width: 1020px) {
         height: 45%;
