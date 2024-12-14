@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import "./LandingPage.scss"; // SCSS file for additional styling
 import ServicesSection from "../services/page";
