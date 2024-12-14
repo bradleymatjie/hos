@@ -10,7 +10,13 @@ import tax from '../../media/images/file-earmark-check.svg';
 import cipc from '../../media/images/file-earmark-spreadsheet.svg';
 import statemet from '../../media/images/wallet-fill.svg';
 import register from '../../media/images/r-circle.svg';
+import { StaticImageData } from 'next/image';
  
+type Service = {
+  icon: string | StaticImageData; // Icon can be a string (URL) or a static image import
+  title: string;                 // Title of the service
+  description: string;           // Description of the service
+};
 
 const ServicesSection = () => {
     const servicesData = [
@@ -75,7 +81,7 @@ const ServicesSection = () => {
             </div>
       </div>
       <div className="service-cards">
-        {servicesData.map((service:any, index:number) => (
+        {servicesData.map((service:Service, index:number) => (
           <ServiceCard key={index}   
           icon={service.icon}
           title={service.title}
