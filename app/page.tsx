@@ -1,7 +1,5 @@
 'use client'
 import { useEffect, useState } from "react";
-import { MobileMenu } from "./components/mobileNav/page";
-import Header from "./components/header/page";
 import LandingPage from "./components/landing/page";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
