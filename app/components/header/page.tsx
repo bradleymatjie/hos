@@ -4,16 +4,16 @@ import './header.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function Header({ menuTogglerFunction, menuTogglerValue }: any) {
+export default function Header() {
   const pathname = usePathname();
   const { toggleMenu, isMenuOpen } = useMenu();
     
 
  return (
   <header className='header ' data-aos="fade-down">
-    <a href="/">
+    <Link href="/">
       MABS
-    </a>
+    </Link>
 
     <nav>
       <ul className='header-navItems'>

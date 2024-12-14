@@ -1,10 +1,16 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-const ServiceCard = ({ icon:Icon, title, description }:any) => {
+interface ServiceCardProps {
+    icon: string | StaticImageData; // Type for a React component passed as an icon
+    title: string;
+    description: string;
+  }
+  
+  const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) => {
   return (
     <div className="service-card" data-aos="zoom-in">
       <div className={`service-icon`} >
-      <Image src={Icon.src} alt="icon" height={30} width={30} />
+      <Image src={icon} alt="icon" height={30} width={30} />
       </div>
       <h3>{title}</h3>
       <p>{description}</p>

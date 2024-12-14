@@ -2,7 +2,7 @@
 import React from "react";
 import "./LandingPage.scss"; // SCSS file for additional styling
 import ServicesSection from "../services/page";
-import Contact from "../contact.tsx/page";
+// import Contact from "../contact.tsx/page";
 
 const LandingPage = () => {
   return (
