@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useMenu } from '@/app/Context/MenuContext';
 
-export const MobileMenu: React.FC = () => {
+export default function MobileMenu() {
   const pathname = usePathname();
   const { isMenuOpen } = useMenu();
 
