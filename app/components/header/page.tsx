@@ -10,7 +10,7 @@ export default function Header({ menuTogglerFunction, menuTogglerValue }: any) {
     
 
  return (
-  <header className='header'>
+  <header className='header ' data-aos="fade-down">
     <a href="/">
       MABS
     </a>

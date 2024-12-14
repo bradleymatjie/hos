@@ -63,11 +63,11 @@ const ServicesSection = () => {
       
 
   return (
-    <section className="services-section min-h-screen flex justify-center items-center">
+    <section className="services-section min-h-screen flex justify-center items-center" data-aos="fade-down">
         <h2>Our Services</h2>
       <div className="card">
             <div>
-                Driving Growth Through<br/> Strategic Marketing
+                Driving Growth Through<br/> Accounting solutions
             </div>
             <div>
                 12 years <br/>

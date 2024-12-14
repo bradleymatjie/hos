@@ -3,13 +3,12 @@ import React from "react";
 import "./LandingPage.scss"; // SCSS file for additional styling
 import ServicesSection from "../services/page";
 import Contact from "../contact.tsx/page";
-import { Subscribe } from "../newsletter/page";
 
 const LandingPage = () => {
   return (
     <>
-    <div className="min-h-screen flex justify-center items-center hero">
-      <div className="rounded-3xl p-8 max-w-5xl w-full h-100">
+    <div className="min-h-screen flex justify-center items-center hero " data-aos="fade-up">
+      <div className="rounded-3xl p-8 max-w-5xl w-full h-100" >
         {/* Header */}
         <div className="text-center">
           <h1 className="text-4xl font-bold">
@@ -37,7 +36,6 @@ const LandingPage = () => {
     </div>
     <ServicesSection />
     {/* <Contact /> */}
-    <Subscribe />
     </>
   );
 };
