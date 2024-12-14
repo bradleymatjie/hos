@@ -65,7 +65,7 @@ const ServicesSection = () => {
   return (
     <section className="services-section min-h-screen flex justify-center items-center" data-aos="fade-down">
         <h2>Our Services</h2>
-      <div className="card">
+      <div className="card" data-aos="flip-left">
             <div>
                 Driving Growth Through<br/> Accounting solutions
             </div>
