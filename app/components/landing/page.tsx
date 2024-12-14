@@ -35,7 +35,7 @@ const LandingPage = () => {
       </div>
     </div>
     <ServicesSection />
-    <Contact />
+    {/* <Contact /> */}
     <Subscribe />
     </>
   );
