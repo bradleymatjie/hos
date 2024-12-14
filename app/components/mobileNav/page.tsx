@@ -1,39 +1,34 @@
 'use client'
-import { useState } from 'react';
 import './mobilenav.scss';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useMenu } from '@/app/Context/MenuContext';
 
-export const MobileMenu = () => {
-  // const [activeMenuItem, setActiveMenuItem] = useState('home');
+export const MobileMenu: React.FC = () => {
   const pathname = usePathname();
-
   const { isMenuOpen } = useMenu();
 
   return (
-    <div className={`mobileMenu ${isMenuOpen ? 'open':''}`}>
-      <ul className={`${isMenuOpen ? 'open':''}`}>
-      <li>
-            <Link
-              href="/"
-              className={pathname === '/' ? 'active' : ''}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/services"
-              className={pathname === 'services' ? 'active' : ''}
-            >
-              Our Services
-            </Link>
-          </li>
-
-
+    <div className={`mobileMenu ${isMenuOpen ? 'open' : ''}`}>
+      <ul className={`${isMenuOpen ? 'open' : ''}`}>
         <li>
-          <Link 
+          <Link
+            href="/"
+            className={pathname === '/' ? 'active' : ''}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/services"
+            className={pathname === '/services' ? 'active' : ''}
+          >
+            Our Services
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/team"
             className={pathname === '/team' ? 'active' : ''}
           >
@@ -41,14 +36,14 @@ export const MobileMenu = () => {
           </Link>
         </li>
         <li>
-          <Link 
-          href="/contactus"
-            className={pathname === '/contact' ? 'active' : ''}
+          <Link
+            href="/contactus"
+            className={pathname === '/contactus' ? 'active' : ''}
           >
-            ContactUs
+            Contact Us
           </Link>
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
