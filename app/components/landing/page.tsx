@@ -20,7 +20,7 @@ const LandingPage = () => {
               className="mx-auto"
             />
         <div className="text-center">
-          <p className="" style={{ fontSize: "2rem", fontWeight: "bold" }}>
+          <p className="hero-desc">
           Unleashing Digital Brilliance: Welcome to House of Saint, Your Gateway to Innovation
           </p>
         </div>
