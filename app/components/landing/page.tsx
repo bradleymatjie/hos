@@ -9,7 +9,7 @@ import Image from "next/image";
 const LandingPage = () => {
   return (
     <>
-    <div className="min-h-screen flex justify-center items-center hero " data-aos="fade-up">
+    <div className="min-h-screen flex justify-center items-center hero" data-aos="fade-up">
       <div className="rounded-3xl max-w-5xl w-full h-100" >
         {/* Header */}
         <Image
