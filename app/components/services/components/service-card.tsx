@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 
 interface ServiceCardProps {
-    icon: string | StaticImageData; // Type for a React component passed as an icon
+    icon: string | StaticImageData;
     title: string;
     description: string;
   }

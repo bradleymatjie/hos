@@ -12,7 +12,7 @@ export default function Header() {
  return (
   <header className='header ' data-aos="fade-down">
     <Link href="/">
-      MABS
+      H.O.S
     </Link>
 
     <nav>
@@ -20,7 +20,7 @@ export default function Header() {
       <li>
             <Link
               href="/"
-              className={pathname === '/' ? 'active' : ''}
+              className={pathname === '/#' ? 'active' : ''}
               
             >
               Home
@@ -29,8 +29,8 @@ export default function Header() {
 
           <li>
             <Link
-              href="/services"
-              className={pathname === '/services' ? 'active' : ''}
+              href="#services"
+              className={pathname === '/#services' ? 'active' : ''}
               
             >
               Our Services
@@ -39,8 +39,8 @@ export default function Header() {
 
         <li>
           <Link 
-            href="/team"
-            className={pathname === 'team' ? 'active' : ''}
+            href="#team"
+            className={pathname === '/#team' ? 'active' : ''}
             
           >
             Team
@@ -48,8 +48,8 @@ export default function Header() {
         </li>
         <li>
           <Link 
-          href="/contact"
-            className={pathname === '/contact' ? 'active' : ''}
+          href="#contact"
+            className={pathname === '/#contact' ? 'active' : ''}
           >
             ContactUs
           </Link>

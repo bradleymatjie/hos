@@ -1,3 +1,4 @@
+import { Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -26,6 +27,27 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
             <Header />
             <MobileMenu />
             {children}
+            <footer className="bg-primary text-white py-8 px-4 md:px-16">
+              <div className="max-w-screen-xl mx-auto text-center">
+                <p className="mb-4">&copy; {new Date().getFullYear()} HOUSE OF SAINT. All Rights Reserved.</p>
+                <div className="flex justify-center gap-6">
+                  <a href="/privacy-policy" className="text-white hover:text-secondary">Privacy Policy</a>
+                  <a href="/terms-of-service" className="text-white hover:text-secondary">Terms of Service</a>
+                  <a href="mailto:contact@houseofsaint.com" className="text-white hover:text-secondary">Contact Us</a>
+                </div>
+                <div className="mt-4 flex justify-center gap-6">
+                  <a href="https://facebook.com/houseofsaint" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <Facebook className="text-2xl" />
+                  </a>
+                  <a href="https://twitter.com/houseofsaint" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <Twitter className="text-2xl" />
+                  </a>
+                  <a href="https://linkedin.com/company/houseofsaint" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <Linkedin className="text-2xl" />
+                  </a>
+                </div>
+              </div>
+            </footer>
         </body>
       </MenuProvider>
     </html>
