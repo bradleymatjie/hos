@@ -3,20 +3,24 @@ import React from "react";
 import "./LandingPage.scss"; // SCSS file for additional styling
 import ServicesSection  from "../services/page";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 // import Contact from "../contact.tsx/page";
 
 const LandingPage = () => {
   return (
     <>
     <div className="min-h-screen flex justify-center items-center hero " data-aos="fade-up">
-      <div className="rounded-3xl p-8 max-w-5xl w-full h-100" >
+      <div className="rounded-3xl max-w-5xl w-full h-100" >
         {/* Header */}
+        <Image
+              src="/hos-logo.png"
+              alt="Logo"
+              width={500}
+              height={400}
+              className="mx-auto"
+            />
         <div className="text-center">
-          <h1 className="text-4xl font-bold">
-          WE ARE A
-          CREATIVE DIGITAL AGENCY
-          </h1>
-          <p className="mt-4">
+          <p className="" style={{ fontSize: "2rem", fontWeight: "bold" }}>
           Unleashing Digital Brilliance: Welcome to House of Saint, Your Gateway to Innovation
           </p>
         </div>
