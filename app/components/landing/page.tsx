@@ -95,10 +95,10 @@ const LandingPage = () => {
         <div className="mx-auto w-full max-w-sm p-4">
           <DrawerHeader>
             <DrawerTitle>Book a Consultation</DrawerTitle>
-            <DrawerDescription>Fill in your details and we'll get back to you.</DrawerDescription>
+            <DrawerDescription>Fill in your details and we will get back to you.</DrawerDescription>
           </DrawerHeader>
 
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-medium">Full Name</label>
                 <input
