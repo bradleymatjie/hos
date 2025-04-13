@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "./components/header/page";
 import MobileMenu from "./components/mobileNav/page";
 import { MenuProvider } from "./Context/MenuContext";
+import { Toaster } from "@/components/ui/toaster"
 
 // Import Poppins font
 const poppins = Poppins({
@@ -27,6 +28,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
             <Header />
             <MobileMenu />
             {children}
+            <Toaster />
             <footer className="bg-primary text-white py-8 px-4 md:px-16">
               <div className="max-w-screen-xl mx-auto text-center">
                 <p className="mb-4">&copy; {new Date().getFullYear()} HOUSE OF SAINT. All Rights Reserved.</p>
@@ -49,6 +51,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
               </div>
             </footer>
         </body>
+
       </MenuProvider>
     </html>
   );

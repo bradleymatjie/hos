@@ -4,6 +4,7 @@ import "./LandingPage.scss"; // SCSS file for additional styling
 import ServicesSection  from "../services/page";
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
+import { useToast } from "@/hooks/use-toast"
 import {
   Drawer,
   DrawerClose,
@@ -16,11 +17,14 @@ import {
 } from "@/components/ui/drawer"
 
 const LandingPage = () => {
+  const { toast } = useToast()
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const [minDate, setMinDate] = useState("");
   const [minTime, setMinTime] = useState("");
@@ -61,7 +65,18 @@ const LandingPage = () => {
     };
 
     console.log("Booking Submitted:", bookingData);
+    setIsDrawerOpen(false)
     // You can now send this data to an API or email service!
+    toast({
+      title: "Scheduled: Consultation",
+      description: `We will get back to you: ${selectedDate}, ${selectedTime} ${Number(selectedTime.split(":")[0]) >= 12 ? " PM" : " AM"}`,
+    })
+
+    setFullName("");
+    setEmail("");
+    setSelectedDate("");
+    setSelectedTime("");
+    setMessage("");
   };
 
 
@@ -85,9 +100,9 @@ const LandingPage = () => {
 
         {/* Call-to-action buttons */}
         <div className="flex justify-center mt-6 gap-4">
-          <Drawer>
+        <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
             <DrawerTrigger asChild>
-            <button className="bg-gray-800 text-white py-3 px-6 rounded-lg font-medium">
+            <button className="bg-gray-800 text-white py-3 px-6 rounded-lg font-medium" onClick={() => setIsDrawerOpen(true)}>
                   Book A consultation
                 </button>
             </DrawerTrigger>
@@ -118,6 +133,18 @@ const LandingPage = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
+                required
+                className="mt-1 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium">Phone Number</label>
+              <input
+                type="tel"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                placeholder="0729509295"
                 required
                 className="mt-1 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800"
               />
@@ -157,15 +184,15 @@ const LandingPage = () => {
                 className="mt-1 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800"
               ></textarea>
             </div>
-          </form>
-
-          <DrawerFooter className="mt-4">
+            <DrawerFooter className="mt-4">
             <Button type="submit">Submit</Button>
             <DrawerClose asChild>
               <Button variant="outline">Cancel</Button>
             </DrawerClose>
           </DrawerFooter>
-        </div>
+          </form>
+          </div>
+          
             </DrawerContent>
           </Drawer>
           <button className="border border-white-300 py-3 px-6 rounded-lg font-medium">
