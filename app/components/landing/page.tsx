@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./LandingPage.scss"; // SCSS file for additional styling
 import ServicesSection  from "../services/page";
 import Image from "next/image";
@@ -21,8 +21,6 @@ const LandingPage = () => {
   const { toast } = useToast()
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedTime, setSelectedTime] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -33,8 +31,6 @@ const LandingPage = () => {
     const bookingData = {
       fullName,
       email,
-      selectedDate,
-      selectedTime,
       message,
     };
 
@@ -42,14 +38,12 @@ const LandingPage = () => {
     setIsDrawerOpen(false)
     // You can now send this data to an API or email service!
     toast({
-      title: "Scheduled: Consultation",
-      description: `We will get back to you: ${selectedDate}, ${selectedTime} ${Number(selectedTime.split(":")[0]) >= 12 ? " PM" : " AM"}`,
+      title: "Message Sent",
+      description: `We will get back to you soon!`,
     })
 
     setFullName("");
     setEmail("");
-    setSelectedDate("");
-    setSelectedTime("");
     setMessage("");
   };
 
