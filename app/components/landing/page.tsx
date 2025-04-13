@@ -27,33 +27,6 @@ const LandingPage = () => {
   const [message, setMessage] = useState("");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const [minDate, setMinDate] = useState("");
-  const [minTime, setMinTime] = useState("");
-
-  useEffect(() => {
-    const today = new Date();
-    const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, "0");
-    const dd = String(today.getDate()).padStart(2, "0");
-    const formattedToday = `${yyyy}-${mm}-${dd}`;
-    setMinDate(formattedToday);
-  }, []);
-
-  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const date = e.target.value;
-    setSelectedDate(date);
-
-    const today = new Date();
-    const selected = new Date(date);
-    if (selected.toDateString() === today.toDateString()) {
-      const hours = String(today.getHours()).padStart(2, "0");
-      const minutes = String(today.getMinutes()).padStart(2, "0");
-      setMinTime(`${hours}:${minutes}`);
-    } else {
-      setMinTime("");
-    }
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
