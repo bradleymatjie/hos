@@ -15,6 +15,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
+import Link from "next/link";
 
 const LandingPage = () => {
   const { toast } = useToast()
@@ -100,16 +101,19 @@ const LandingPage = () => {
 
         {/* Call-to-action buttons */}
         <div className="flex justify-center mt-6 gap-4">
+        <Link href={'/consult'} className="bg-gray-800 text-white py-3 px-6 rounded-lg font-medium" >
+                  Book A consultation
+        </Link>
         <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
             <DrawerTrigger asChild>
-            <button className="bg-gray-800 text-white py-3 px-6 rounded-lg font-medium" onClick={() => setIsDrawerOpen(true)}>
-                  Book A consultation
-                </button>
+            <button  className="border border-white-300 py-3 px-6 rounded-lg font-medium" onClick={() => setIsDrawerOpen(true)}>
+            Contact Us
+          </button>
             </DrawerTrigger>
             <DrawerContent>
         <div className="mx-auto w-full max-w-sm p-4">
           <DrawerHeader>
-            <DrawerTitle>Book a Consultation</DrawerTitle>
+            <DrawerTitle>Contact Us</DrawerTitle>
             <DrawerDescription>Fill in your details and we will get back to you.</DrawerDescription>
           </DrawerHeader>
 
@@ -151,36 +155,12 @@ const LandingPage = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium">Preferred Date</label>
-              <input
-                type="date"
-                value={selectedDate}
-                onChange={handleDateChange}
-                min={minDate}
-                required
-                className="mt-1 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium">Preferred Time</label>
-              <input
-                type="time"
-                value={selectedTime}
-                onChange={(e) => setSelectedTime(e.target.value)}
-                min={minTime}
-                required
-                className="mt-1 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800"
-              />
-            </div>
-
-            <div>
               <label className="block text-sm font-medium">Message</label>
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 rows={3}
-                placeholder="Tell us more about what you’re looking for..."
+                placeholder="Send us a message..."
                 className="mt-1 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-800"
               ></textarea>
             </div>
@@ -195,9 +175,7 @@ const LandingPage = () => {
           
             </DrawerContent>
           </Drawer>
-          <button className="border border-white-300 py-3 px-6 rounded-lg font-medium">
-            Contact Us
-          </button>
+          
         </div>
 
         {/* Features section */}
