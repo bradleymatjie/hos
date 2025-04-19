@@ -56,8 +56,8 @@ const LandingPage = () => {
         <Image
               src="/hos-logo.png"
               alt="Logo"
-              width={500}
-              height={400}
+              width={350}
+              height={300}
               className="mx-auto"
             />
         <div className="text-center">

@@ -2,56 +2,9 @@
 import './services.scss'
 import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Monitor, Palette, BarChart, ShoppingCart, Smartphone, Layers, Cloud, Camera, Users } from "lucide-react";
 import { motion } from "framer-motion"
+import {servicesList} from './../../data'
 
-const services = [
-  {
-    title: "Web Design",
-    description: "Modern, responsive websites that convert visitors into clients.",
-    icon: Monitor,
-  },
-  {
-    title: "Brand Identity",
-    description: "Logo design, colors, fonts — everything to make you unforgettable.",
-    icon: Palette,
-  },
-  {
-    title: "Digital Marketing",
-    description: "SEO, content creation, and strategies that drive growth.",
-    icon: BarChart,
-  },
-  {
-    title: "E-commerce Solutions",
-    description: "End-to-end e-commerce websites to boost your online sales.",
-    icon: ShoppingCart,
-  },
-  {
-    title: "Mobile App Development",
-    description: "Native and cross-platform apps for seamless user experiences.",
-    icon: Smartphone,
-  },
-  {
-    title: "UI/UX Design",
-    description: "Crafting user-centered designs for better engagement and retention.",
-    icon: Layers,
-  },
-  {
-    title: "Cloud Services",
-    description: "Cloud hosting and data management for scalability and security.",
-    icon: Cloud,
-  },
-  {
-    title: "Content Creation",
-    description: "Videos, blogs, and visuals to elevate your brand presence.",
-    icon: Camera,
-  },
-  {
-    title: "Consulting",
-    description: "Expert advice to help you optimize your business strategy.",
-    icon: Users,
-  },
-];
 
 export default function ServicesSection() {
   return (
@@ -61,7 +14,7 @@ export default function ServicesSection() {
       </h2>
 
       <div className="grid md:grid-cols-3 gap-8">
-        {services.slice(0,3).map((service, index) => {
+        {servicesList.slice(0,3).map((service, index) => {
           const Icon = service.icon
 
           return (

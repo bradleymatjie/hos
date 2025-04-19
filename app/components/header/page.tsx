@@ -3,6 +3,7 @@ import { useMenu } from '@/app/Context/MenuContext';
 import './header.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Button } from '@/components/ui/button';
 
 export default function Header() {
   const pathname = usePathname();
@@ -20,7 +21,7 @@ export default function Header() {
       <li>
             <Link
               href="/"
-              className={pathname === '/#' ? 'active' : ''}
+              className={pathname === '/' ? 'active' : ''}
               
             >
               Home
@@ -29,8 +30,8 @@ export default function Header() {
 
           <li>
             <Link
-              href="#services"
-              className={pathname === '/#services' ? 'active' : ''}
+              href="/services"
+              className={pathname === '/services' ? 'active' : ''}
               
             >
               Our Services
@@ -39,8 +40,8 @@ export default function Header() {
 
         <li>
           <Link 
-            href="#team"
-            className={pathname === '/#team' ? 'active' : ''}
+            href="/team"
+            className={pathname === '/team' ? 'active' : ''}
             
           >
             Team
@@ -48,10 +49,14 @@ export default function Header() {
         </li>
         <li>
           <Link 
-          href="#contact"
-            className={pathname === '/#contact' ? 'active' : ''}
+          href="/consult"
+            className={pathname === '/consult' ? 'active' : ''}
           >
-            ContactUs
+            
+            <Button variant="outline" style={{
+              background:`${pathname === '/consult' && 'black'}`,
+              color:`${pathname === '/consult' && 'whitesmoke'}`,
+              }}>Consultation</Button>
           </Link>
         </li>
       </ul>

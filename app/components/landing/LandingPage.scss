@@ -9,10 +9,10 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('/bg.avif'); // replace with actual image
+    background-image: url('https://scontent.fjnb2-1.fna.fbcdn.net/v/t1.6435-9/75402042_2155399888098121_3626579039377948672_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=z9qMMDUXQ6wQ7kNvwFWPG08&_nc_oc=Adktj1Pcms2dGLcuoc4TOmx9u5mazUamED0OUvRee_0OAjcNZN7Mutdvmoq7KzSjy2w&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fjnb2-1.fna&_nc_gid=YAm8RLMI9HEod8PFPY_BAg&oh=00_AfEe61NlZYQfCxh0XHWCpu0ftnUBnHFfNmYsp5VaRtSI7w&oe=682ABBEC'); // replace with actual image
     background-size: cover;
     background-position: center;
-    filter: grayscale(100%) brightness(50%);
+    filter: grayscale(50%) brightness(30%);
     z-index: 1;
   }
 
@@ -22,7 +22,7 @@
   }
 
   .hero-desc {
-    font-size: 2rem; 
+    font-size: 1.2rem; 
     font-weight: bold;
 
     @media (max-width: 668px) {
