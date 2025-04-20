@@ -1,5 +1,5 @@
 .consult {
-    // border: 1px solid red;
+    width: 100%;
     display: flex;
     height: calc(100dvh - 60px);
     margin-top: 60px;
@@ -58,4 +58,43 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.submit-container {
+    padding: 10px 0;
+    margin: 10px auto;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five {
+    display: none;
+}
+
+.one.show {
+    display: inline;
+}
+
+
+.two.show {
+    display: inline;
+}
+
+.three.show {
+    display: inline;
+}
+
+.four.show {
+    display: inline;
+}
+
+.five.show {
+    display: inline;
 }
