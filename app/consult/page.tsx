@@ -31,7 +31,6 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
-
 const ConsultationJourney = () => {
   const [businessName, setBusinessName] = useState("");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
