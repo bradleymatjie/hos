@@ -34,6 +34,30 @@ const Testimonials = () => {
             position: "CEO of Kingdom Advisors",
             image: '/hero.jpg',
         },
+        {
+            quote: "DesignMe's solutions transformed our business operations completely.",
+            author: "Rt Wxt",
+            position: "CEO of Kingdom Advisors",
+            image: '/hero.jpg',
+        },
+        {
+            quote: "DesignMe's solutions transformed our business operations completely.",
+            author: "Rt Wxt",
+            position: "CEO of Kingdom Advisors",
+            image: '/hero.jpg',
+        },
+        {
+            quote: "DesignMe's solutions transformed our business operations completely.",
+            author: "Rt Wxt",
+            position: "CEO of Kingdom Advisors",
+            image: '/hero.jpg',
+        },{
+            quote: "DesignMe's solutions transformed our business operations completely.",
+            author: "Rt Wxt",
+            position: "CEO of Kingdom Advisors",
+            image: '/hero.jpg',
+        },
+
     ];
 
     return (
@@ -48,44 +72,47 @@ const Testimonials = () => {
                     </h3>
                 </div>
 
-                <Carousel
-                    opts={{
-                        align: "start",
-                    }}
-                    className="w-full"
-                >
-                    <CarouselContent>
-                        {testimonials.map((testimonial, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                                <div className="p-1">
-                                    <Card className="testimonial-card">
-                                        <CardTitle>
-                                            <Avatar>
-                                                <AvatarImage src={testimonial.image} alt="@shadcn" />
-                                                <AvatarFallback>CN</AvatarFallback>
-                                            </Avatar>
-                                        </CardTitle>
-                                        <CardContent className="p-6 flex flex-col h-full">
-                                            <p className="msg italic text-gray-700">
-                                                {`"${testimonial.quote}"`}
-                                            </p>
-                                            <div className="mt-auto">
-                                                <p className="author-name font-semibold">
-                                                    {testimonial.author}
+                <div className="relative courasel" style={{backgroundColor: `transparent`}}>
+                    <Carousel
+                        opts={{
+                            align: "start",
+                            loop: true,
+                        }}
+                        className="w-full"
+                    >
+                        <CarouselContent className="-ml-1">
+                            {testimonials.map((testimonial, index) => (
+                                <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                                    <div className="p-1">
+                                        <Card className="testimonial-card h-full">
+                                            <CardContent className="p-6 flex flex-col h-full">
+                                                <div className="flex justify-center mb-4">
+                                                    <Avatar className="h-16 w-16">
+                                                        <AvatarImage src={testimonial.image} />
+                                                        <AvatarFallback>{testimonial.author.charAt(0)}</AvatarFallback>
+                                                    </Avatar>
+                                                </div>
+                                                <p className="msg italic text-gray-700 mb-6">
+                                                    {`"${testimonial.quote}"`}
                                                 </p>
-                                                <p className="author-position text-sm text-gray-600">
-                                                    {testimonial.position}
-                                                </p>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="hidden md:flex" />
-                    <CarouselNext className="hidden md:flex" />
-                </Carousel>
+                                                <div className="mt-auto">
+                                                    <p className="author-name font-semibold text-center">
+                                                        {testimonial.author}
+                                                    </p>
+                                                    <p className="author-position text-sm text-gray-600 text-center">
+                                                        {testimonial.position}
+                                                    </p>
+                                                </div>
+                                            </CardContent>
+                                        </Card>
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 hidden md:flex" />
+                        <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:flex" />
+                    </Carousel>
+                </div>
             </div>
         </section>
     );

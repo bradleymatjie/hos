@@ -58,23 +58,13 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 1rem;
-
+        padding: 10px;
         height: 300px;
         transition: transform 0.3s ease;
 
         &:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        blockquote {
-            font-style: italic;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            position: relative;
-            font-size: 1.1rem;
         }
     }
 
