@@ -14,6 +14,21 @@
     background-position: center;
     filter: grayscale(50%) brightness(30%);
     z-index: 1;
+
+    @media  (max-width: 640px) {
+      background-position: right;
+      filter: grayscale(50%) brightness(60%);
+
+    }
+  }
+
+  &-buttons-container {
+      @media (max-width: 430px) {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 30px auto 0 auto;
+      }
   }
 
   > .rounded-3xl {

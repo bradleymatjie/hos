@@ -3,7 +3,6 @@ import { useMenu } from '@/app/Context/MenuContext';
 import './header.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Button } from '@/components/ui/button';
 
 export default function Header() {
   const pathname = usePathname();
@@ -52,11 +51,7 @@ export default function Header() {
           href="/consult"
             className={pathname === '/consult' ? 'active' : ''}
           >
-            
-            <Button variant="outline" style={{
-              background:`${pathname === '/consult' && 'black'}`,
-              color:`${pathname === '/consult' && 'whitesmoke'}`,
-              }}>Consultation</Button>
+            Consultation
           </Link>
         </li>
       </ul>

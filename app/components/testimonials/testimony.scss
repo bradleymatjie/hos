@@ -1,0 +1,134 @@
+.testimonials {
+  position: relative;
+  width: 100%;
+  height: 90dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: whitesmoke;
+
+  .testimonials-container {
+    position: relative;
+    width: 70%;
+    max-width: 1200px;
+    padding: 40px;
+    height: 80%;
+    z-index: 1;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @media (max-width: 640px) {
+      padding: 40px 5px;
+      width: 100%;
+
+      border-radius: 0;
+    }
+  }
+
+  .image-Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.5) blur(1px);
+    z-index: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+    }
+  }
+
+  .testimonials-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: 100%;
+    justify-content: space-evenly;
+
+  }
+
+  .testimonials-container-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    height: 50%;
+    width: 100%;
+    align-items: center;
+
+    @media (max-width: 640px) {
+      width: 100%;
+      height: 200px;
+      overflow-x: scroll;
+      justify-content: flex-start;
+      padding: 0 5px;
+    }
+
+
+      & > img {
+        min-width: 120px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 1rem;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        opacity: 0.5;
+        transition: all 0.5s ease;
+        cursor: pointer;
+
+
+        @media (max-width: 640px) {
+          min-width: 100px;
+          height: 150px;
+          overflow-x: scroll;
+        }
+
+        &:hover {
+          opacity: 1;
+          transform: rotate(3deg) scale(1.05);
+        }
+
+        &.active {
+          opacity: 1;
+          transform: scale(1.5);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      // Customize odd and even items
+      & > img:nth-child(odd) {
+        transform: rotate(-2deg);
+      }
+
+      & > img:nth-child(even) {
+        transform: rotate(2deg);
+      }
+
+
+      & > img:nth-child(odd):hover {
+        transform: rotate(-5deg) scale(1.05);
+      }
+
+      & > img:nth-child(even):hover {
+        transform: rotate(5deg) scale(1.05);
+      }
+    }
+}
+

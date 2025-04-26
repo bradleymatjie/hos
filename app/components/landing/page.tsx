@@ -16,6 +16,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer"
 import Link from "next/link";
+import Testimonials from "@/app/components/testimonials/page";
 
 const LandingPage = () => {
   const { toast } = useToast()
@@ -67,7 +68,7 @@ const LandingPage = () => {
         </div>
 
         {/* Call-to-action buttons */}
-        <div className="flex justify-center mt-6 gap-4">
+        <div className="flex justify-center mt-6 gap-4 hero-buttons-container">
         <Link href={'/consult'} className="bg-gray-800 text-white py-3 px-6 rounded-lg font-medium" >
                   Book A consultation
         </Link>
@@ -142,13 +143,13 @@ const LandingPage = () => {
           
             </DrawerContent>
           </Drawer>
-          
         </div>
 
         {/* Features section */}
       </div>
     </div>
     <ServicesSection />
+      <Testimonials />
     <section className="py-12 px-4 md:px-16 bg-muted/50 text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Us</h2>
       <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
