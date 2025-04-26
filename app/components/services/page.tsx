@@ -28,7 +28,7 @@ export default function ServicesSection() {
     }, [isHovered])
 
     return (
-        <section className="py-12 px-4 md:px-16 bg-background">
+        <section className="py-12 px-4 md:px-16 bg-background w-100 overflow-hidden">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
                 What We Offer
             </h2>
