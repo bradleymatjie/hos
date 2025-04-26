@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import './testimony.scss';
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
 
 const users = [
     {
@@ -65,6 +67,7 @@ export default function Testimonials() {
                         <p className="text-gray-300">{selectedUser.company}</p>
                         <p className="text-lg font-medium text-white max-w-2xl">{`“${selectedUser.testimonial}”`}</p>
                     </div>
+                    <Button variant="secondary"><Link href="/testimonials">View More</Link></Button>
                 </div>
             </div>
         </section>
