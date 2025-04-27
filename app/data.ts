@@ -42,3 +42,37 @@ export const servicesList = [
       icon: Camera,
     },
   ];
+
+export const testimonialsArray =
+    [
+        {
+            name: 'Skhulile Kunene',
+            company: 'House Of Saint',
+            image: '/hero.jpg',
+            testimonial: 'HBSHWNSHWBYW HW BHufn hbdhnh hh hhd hh dd m fn hrbfhrb rf rfr fhr nr',
+        },
+        {
+            name: 'Jane Doe',
+            company: 'Creative Inc',
+            image: '/sfiso.jpg',
+            testimonial: 'This service changed my life! Highly recommend to everyone!',
+        },
+        {
+            name: 'John Smith',
+            company: 'Innovatech',
+            image: '/card-image.jpg',
+            testimonial: 'Absolutely wonderful experience working with the team!',
+        },
+        {
+            name: 'Sarah Johnson',
+            company: 'Bright Ideas',
+            image: '/hos-logo.png',
+            testimonial: 'Professional, reliable, and creative — highly recommend!',
+        },
+        {
+            name: 'Mike Brown',
+            company: 'NextGen Solutions',
+            image: '/sfiso.jpg',
+            testimonial: 'They really understood our vision and brought it to life.',
+        },
+    ];

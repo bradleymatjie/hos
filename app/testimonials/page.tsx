@@ -1,6 +1,7 @@
 import React from "react";
 import "./Testimonials.scss";
-import {Card, CardContent, CardTitle} from "@/components/ui/card";
+import {testimonialsArray} from '../data';
+import {Card, CardContent} from "@/components/ui/card";
 import {
     Carousel,
     CarouselContent,
@@ -15,50 +16,6 @@ import {
 } from "@/components/ui/avatar"
 
 const Testimonials = () => {
-    const testimonials = [
-        {
-            quote: "The lovely team at DesignMe has provided our startup with significant leverage. Their work is exceptionally professional, and Adrian is always attentive to our needs, taking the time to understand our briefs and offer valuable direction. Additionally, their turnaround times are impressively fast!",
-            author: "Patrick Mawrock",
-            position: "UX Manager at Superhabits",
-            image: '/hero.jpg',
-        },
-        {
-            quote: "DesignMe has greatly exceeded our expectations. The communication is always excellent, the turnaround is extremely quick, and the designs are fresh, innovative, and spot on!",
-            author: "Pw Pxt",
-            position: "Product Designer at Lighthash",
-            image: '/hero.jpg',
-        },
-        {
-            quote: "DesignMe's solutions transformed our business operations completely.",
-            author: "Rt Wxt",
-            position: "CEO of Kingdom Advisors",
-            image: '/hero.jpg',
-        },
-        {
-            quote: "DesignMe's solutions transformed our business operations completely.",
-            author: "Rt Wxt",
-            position: "CEO of Kingdom Advisors",
-            image: '/hero.jpg',
-        },
-        {
-            quote: "DesignMe's solutions transformed our business operations completely.",
-            author: "Rt Wxt",
-            position: "CEO of Kingdom Advisors",
-            image: '/hero.jpg',
-        },
-        {
-            quote: "DesignMe's solutions transformed our business operations completely.",
-            author: "Rt Wxt",
-            position: "CEO of Kingdom Advisors",
-            image: '/hero.jpg',
-        },{
-            quote: "DesignMe's solutions transformed our business operations completely.",
-            author: "Rt Wxt",
-            position: "CEO of Kingdom Advisors",
-            image: '/hero.jpg',
-        },
-
-    ];
 
     return (
         <section className="testimonials-section">
@@ -72,7 +29,7 @@ const Testimonials = () => {
                     </h3>
                 </div>
 
-                <div className="relative courasel" style={{backgroundColor: `transparent`}}>
+                <div className="relative courasel">
                     <Carousel
                         opts={{
                             align: "start",
@@ -81,26 +38,26 @@ const Testimonials = () => {
                         className="w-full"
                     >
                         <CarouselContent className="-ml-1">
-                            {testimonials.map((testimonial, index) => (
+                            {testimonialsArray.map((testimonial, index) => (
                                 <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
                                     <div className="p-1">
                                         <Card className="testimonial-card h-full">
-                                            <CardContent className="p-6 flex flex-col h-full">
+                                            <CardContent className="card-content p-6 flex flex-col h-full">
                                                 <div className="flex justify-center mb-4">
                                                     <Avatar className="h-16 w-16">
                                                         <AvatarImage src={testimonial.image} />
-                                                        <AvatarFallback>{testimonial.author.charAt(0)}</AvatarFallback>
+                                                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                                                     </Avatar>
                                                 </div>
                                                 <p className="msg italic text-gray-700 mb-6">
-                                                    {`"${testimonial.quote}"`}
+                                                    {`"${testimonial.testimonial}"`}
                                                 </p>
                                                 <div className="mt-auto">
                                                     <p className="author-name font-semibold text-center">
-                                                        {testimonial.author}
+                                                        {testimonial.name}
                                                     </p>
                                                     <p className="author-position text-sm text-gray-600 text-center">
-                                                        {testimonial.position}
+                                                        {testimonial.company}
                                                     </p>
                                                 </div>
                                             </CardContent>

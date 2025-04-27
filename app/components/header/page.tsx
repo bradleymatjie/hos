@@ -29,23 +29,13 @@ export default function Header() {
 
           <li>
             <Link
-              href="/services"
-              className={pathname === '/services' ? 'active' : ''}
+              href="/testimonials"
+              className={pathname === '/testimonials' ? 'active' : ''}
               
             >
-              Our Services
+                testimonials
             </Link>
           </li>
-
-        <li>
-          <Link 
-            href="/team"
-            className={pathname === '/team' ? 'active' : ''}
-            
-          >
-            Team
-          </Link>
-        </li>
         <li>
           <Link 
           href="/consult"

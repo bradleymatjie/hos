@@ -3,43 +3,12 @@
 import { useState } from 'react';
 import './testimony.scss';
 import {Button} from "@/components/ui/button";
+import {testimonialsArray} from '../../data'
 import Link from "next/link";
 
-const users = [
-    {
-        name: 'Skhulile Kunene',
-        company: 'House Of Saint',
-        image: '/hero.jpg',
-        testimonial: 'HBSHWNSHWBYW HW BHufn hbdhnh hh hhd hh dd m fn hrbfhrb rf rfr fhr nr',
-    },
-    {
-        name: 'Jane Doe',
-        company: 'Creative Inc',
-        image: '/sfiso.jpg',
-        testimonial: 'This service changed my life! Highly recommend to everyone!',
-    },
-    {
-        name: 'John Smith',
-        company: 'Innovatech',
-        image: '/card-image.jpg',
-        testimonial: 'Absolutely wonderful experience working with the team!',
-    },
-    {
-        name: 'Sarah Johnson',
-        company: 'Bright Ideas',
-        image: '/hos-logo.png',
-        testimonial: 'Professional, reliable, and creative — highly recommend!',
-    },
-    {
-        name: 'Mike Brown',
-        company: 'NextGen Solutions',
-        image: '/sfiso.jpg',
-        testimonial: 'They really understood our vision and brought it to life.',
-    },
-];
 
 export default function Testimonials() {
-    const [selectedUser, setSelectedUser] = useState(users[0]);
+    const [selectedUser, setSelectedUser] = useState(testimonialsArray[0]);
 
     return (
         <section className="testimonials">
@@ -48,7 +17,7 @@ export default function Testimonials() {
 
                 <div className="testimonials-content">
                     <div className="testimonials-container-images">
-                        {users.map((user, index) => (
+                        {testimonialsArray.map((user, index) => (
                             <img
                                 key={index}
                                 src={user.image}
