@@ -6,7 +6,13 @@ import { useMenu } from '@/app/Context/MenuContext';
 
 export default function MobileMenu() {
   const pathname = usePathname();
-  const { isMenuOpen } = useMenu();
+  const { isMenuOpen, closeMenu } = useMenu();
+
+  function closeMenuFunc() {
+    if (isMenuOpen) {
+      closeMenu();
+    }
+  }
 
   return (
     <div className={`mobileMenu ${isMenuOpen ? 'open' : ''}`}>
@@ -14,6 +20,7 @@ export default function MobileMenu() {
         <li>
           <Link
             href="/"
+            onClick={closeMenuFunc}
             className={pathname === '/' ? 'active' : ''}
           >
             Home
@@ -22,6 +29,7 @@ export default function MobileMenu() {
         <li>
           <Link
             href="/testimonials"
+            onClick={closeMenuFunc}
             className={pathname === '/testimonials' ? 'active' : ''}
           >
             testimonials
@@ -38,6 +46,7 @@ export default function MobileMenu() {
         <li>
           <Link
             href="/consult"
+            onClick={closeMenuFunc}
             className={pathname === '/consult' ? 'active' : ''}
           >
             Consultation
