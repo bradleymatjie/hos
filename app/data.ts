@@ -47,9 +47,9 @@ export const testimonialsArray =
     [
         {
             name: 'Skhulile Kunene',
-            company: 'House Of Saint',
+            company: 'Kunene Properties',
             image: '/hero.jpg',
-            testimonial: 'HBSHWNSHWBYW HW BHufn hbdhnh hh hhd hh dd m fn hrbfhrb rf rfr fhr nr',
+            testimonial: 'So amazing, i love every thought and attention to detail they put in their work',
         },
         {
             name: 'Jane Doe',
@@ -76,3 +76,89 @@ export const testimonialsArray =
             testimonial: 'They really understood our vision and brought it to life.',
         },
     ];
+
+    export const projectsData:ProjectsDataType = {
+      projects: {
+        title: 'Our Projects',
+        description: 'A selection of our most impactful and creative work, crafted for clients who value excellence.',
+        list: [
+          {
+            title: 'Brand Identity for Saint Co.',
+            description: 'Logo, typography, and brand kit for a luxury fashion brand.',
+            image: '/hero.jpg',
+          },
+          {
+            title: 'The Luxe Gala Event',
+            description: 'Visual design for a luxury corporate gala.',
+            image: '/hero.jpg',
+          },
+        ],
+      },
+      clients: {
+        title: 'Clients',
+        description: 'Some of the brands and businesses we’ve had the pleasure to work with.',
+        list: [
+          {
+            title: 'Saint Co.',
+            description: 'Logo design and visual branding.',
+            image: '/hero.jpg',
+          },
+          {
+            title: 'LuxeWear',
+            description: 'Rebrand and new mark.',
+            image: '/hero.jpg',
+          },
+        ],
+      },
+      graphics: {
+        title: 'Graphic Design',
+        description: 'Posters, social media visuals, and design experiments.',
+        list: [
+          {
+            title: 'Night Vibes Poster',
+            description: 'A vibrant club event poster.',
+            image: '/hero.jpg',
+          },
+          {
+            title: 'Fashion Week Poster',
+            description: 'Poster design for a fashion showcase.',
+            image: '/hero.jpg',
+          },
+        ],
+      },
+      branding: {
+        title: 'Branding',
+        description: 'Crafting identities with purpose and precision.',
+        list: [
+          {
+            title: 'Saint Skin',
+            description: 'Packaging & visual system design.',
+            image: '/hero.jpg',
+          },
+        ],
+      },
+    };
+    
+
+
+    type ProjectItem = {
+      title: string;
+      description: string;
+      image: string;
+    };
+    
+    type ProjectCategory = {
+      title: string;
+      description: string;
+      list: ProjectItem[];
+    };
+    
+    export type ProjectsDataType = {
+      projects: ProjectCategory;
+      clients: ProjectCategory;
+      graphics: ProjectCategory;
+      branding: ProjectCategory;
+    };
+
+    export type ProjectTabKey = keyof ProjectsDataType;
+    
