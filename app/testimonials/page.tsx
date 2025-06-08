@@ -25,7 +25,7 @@ const Testimonials = () => {
                     <h3 className="subheading">
                         Don&apos;t take our word for it!
                         <br />
-                        Hear it from our partners.
+                        Hear it from our clients.
                     </h3>
                 </div>
 

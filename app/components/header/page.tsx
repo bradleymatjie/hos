@@ -44,6 +44,14 @@ export default function Header() {
             Consultation
           </Link>
         </li>
+        <li>
+          <Link 
+          href="/team"
+            className={pathname === '/team' ? 'active' : ''}
+          >
+            Our Team
+          </Link>
+        </li>
       </ul>
     </nav>
 

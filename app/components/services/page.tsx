@@ -28,7 +28,7 @@ export default function ServicesSection() {
     }, [isHovered])
 
     return (
-        <section className="py-12 px-4 md:px-16 bg-background w-100 overflow-hidden">
+        <section className="py-12 px-4 md:px-16 bg-background w-100 overflow-hidden services">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
                 What We Offer
             </h2>
@@ -66,7 +66,7 @@ export default function ServicesSection() {
                                         viewport={{ once: true }}
                                         transition={{ duration: 1.5, delay: index * 0.15 }}
                                     >
-                                        <Card className="bg-white dark:bg-zinc-900 border border-muted dark:border-zinc-700 rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-300 h-full">
+                                        <Card className="cardItem dark:bg-zinc-900 border border-muted dark:border-zinc-700 rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-300 h-full">
                                             <CardContent className="p-6">
                                                 <CardTitle className="flex items-center gap-2 text-xl font-semibold mb-2">
                                                     <Icon className="w-5 h-5 text-primary" />

@@ -155,7 +155,7 @@ const LandingPage = () => {
       <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
       We combine strategy, design, and development to deliver exceptional results. From startups to established brands, we craft digital experiences that not only captivate but also convert. Our approach is tailored to meet your unique goals, ensuring your brand stands out and thrives in the digital landscape.      </p>
     </section>
-    <section className="py-16 px-4 md:px-16 bg-primary text-white text-center my-10 mb-none">
+    <section className="py-16 px-4 md:px-16 text-white text-center p-2 mb-none" style={{backgroundColor: "teal", padding:"150px 0"}}>
       <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to elevate your brand?</h2>
       <p className="mb-6">Let’s build something amazing together. Get in touch today.</p>
       <Button variant="secondary" className="text-lg font-semibold" onClick={() => setIsDrawerOpen(true)}>Contact Us</Button>

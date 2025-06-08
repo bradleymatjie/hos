@@ -1,10 +1,13 @@
 .testimonials-section {
     padding: 4rem 2rem;
-    background-color: #f8f9fa;
     height: calc(100dvh - 80px);
     margin-top: 80px;
     display: flex;
     align-items: center;
+    // background-image: url('/testi.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
 
     @media (max-width: 640px) {
         height: 100vh;
@@ -53,10 +56,10 @@
     .testimonial-card {
         background: white;
         border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         padding: 10px;
         height: 300px;
         transition: transform 0.3s ease;
+        
 
         & .card-content {
             flex-direction: column;

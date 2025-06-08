@@ -2,3 +2,28 @@
     border: 1px solid red;
     margin: 0 auto;
 }
+
+.services {
+    background-image: url('/glassBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%); //make the bright be 70% but keep the contnent as 100% bright
+    padding: 100px 0;
+
+    .cardItem {
+        background-color: rgba(255, 255, 255, 0.1); // or rgba(0, 0, 0, 0.2) for dark mode
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(8px);
+        box-shadow: 1px 1px 1px 1px #252525;
+        border-radius: 16px;
+        border: 1px solid #252525;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
